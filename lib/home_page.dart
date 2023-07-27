@@ -1,24 +1,17 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
+import 'day_card.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<StatefulWidget> createState() => _MainPageState();
-
-}
-
-class _MainPageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        
-      ),
-    )
-    throw UnimplementedError();
-  }
+Widget homePage(BuildContext context) {
+  List<String> daysOfWeek = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+  return Scaffold(
+    body: ListView.builder(
+      itemBuilder: (BuildContext context, int index) {
+        return dayCard(context, daysOfWeek, index);
+      },
+      scrollDirection: Axis.vertical,
+      itemCount: 7,
+    ),
+  );
+  throw UnimplementedError();
 }
