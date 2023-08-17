@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+//import 'main.dart';
 import 'day_card.dart';
 
 Widget homePage(BuildContext context) {
@@ -13,5 +13,4 @@ Widget homePage(BuildContext context) {
       itemCount: 7,
     ),
   );
-  throw UnimplementedError();
 }
